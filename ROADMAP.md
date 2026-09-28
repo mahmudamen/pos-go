@@ -148,26 +148,53 @@ another checkout feature.
 
 ### Drawn from adjacent products
 
-The community work is not invented in a vacuum. Three things come from watching
-what comparable Egyptian merchant platforms actually ship, and one thing comes
-from what they get wrong:
+The community work is not invented in a vacuum. Two comparators were read
+closely — a Middle Eastern merchant platform and a Belgian ordering-platform
+vendor — because each is strong where the other is not, and between them they
+cover most of what this phase could become.
+
+**From the regional platform:**
 
 - **Referral by invitation, not by banner.** The national directory already
   issues single-use invitation codes, and that is the whole mechanic a referral
   programme needs. What is new is rewarding the inviter: a share link that
   credits **scan credits**, not cash, which keeps the reward inside the product
   and keeps payout, tax and fraud handling out of scope.
-- **Payouts the way Egyptian shops actually get paid.** If a community
-  programme ever does pay out, bank transfer and mobile wallet are the rails
-  people use. That is a deliberate deferral, not an oversight — a till that has
-  to withhold tax from an individual's commission is a different product.
+- **Payouts the way shops actually get paid.** Bank transfer and mobile wallet
+  are the rails people here use. That is a deliberate deferral, not an oversight
+  — a till that has to withhold tax from an individual's commission is a
+  different product.
 - **A place to talk that is not the app.** Merchant communities in this market
   live on Telegram. A channel for releases and support costs very little and
-  reaches the people who will not install a community tab.
-- **Where they are weak: automation.** Comparable platforms document their
-  referral withdrawal as a manual, support-contacted process. Anything POS.Go
-  builds here should be automatic and self-service from the start, because that
-  is the cheapest possible way to be better than the alternative.
+  reaches people who will not install a community tab.
+- **Where it is weak: automation.** Its referral withdrawal is a manual,
+  support-contacted process. Anything built here is automatic and self-service
+  from the start, because that is the cheapest possible way to be better than
+  the alternative.
+
+**From the Belgian vendor**, whose whole pitch is selling merchants their own
+brand:
+
+- **Name the surfaces and link them to each other.** They sell one backend as a
+  family — ordering app, kiosk, loyalty, reservations — and the family is the
+  pitch. POS.Go already has four surfaces, which is the same asset, and the
+  About claim of "built as one system" stays a claim until each screen can name
+  the others. Cheap, and it makes the multi-part product legible.
+- **White-label the till per tenant.** Their central promise is the merchant's
+  own branded app. POS.Go gives a tenant its own subdomain, name and receipt
+  header, but the app itself looks the same in every shop. For a bookshop and a
+  pharmacy that is a real gap, and it is the gap their sales team sells against.
+- **Give the loyalty points a face.** Points accrue server-side and are visible
+  to staff, but the customer never sees them. A points balance that only the
+  merchant can read is not a loyalty programme.
+- **A page per trade.** They run a landing page for each of eight industries.
+  The same idea applies to these docs: one page per vertical, showing the
+  workflow that vertical actually uses, which is more useful to a shop than
+  another feature list.
+- **Document the download.** They ship installers directly and link them from
+  their site, which is also the fallback when an app-store listing is not yet
+  public. POS.Go is in exactly that position, and the difference is a page
+  rather than a dead button.
 
 **One hard constraint, inherited from the app store.** Google Play Billing
 becomes mandatory the moment an app can spend real money. Rewarding referrals
