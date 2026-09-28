@@ -7,6 +7,11 @@ Anything marked **Shipped** is already in a released version; see
 [`CHANGELOG.md`](CHANGELOG.md). The engineering detail behind these items lives
 in the private source repository.
 
+This roadmap is informed by watching what comparable Egyptian merchant platforms
+actually ship — where they earn their keep, and where their documentation gives
+away that a feature is unfinished. Where a decision here exists to do something
+*differently*, the reasoning is written down rather than assumed.
+
 ## At a glance
 
 | | Workstream | Why it is where it is |
@@ -140,6 +145,36 @@ directory with invitation codes, expertise levels and moderation. Planned next:
 
 **Why:** retention for the people who use a till all day is worth more than
 another checkout feature.
+
+### Drawn from adjacent products
+
+The community work is not invented in a vacuum. Three things come from watching
+what comparable Egyptian merchant platforms actually ship, and one thing comes
+from what they get wrong:
+
+- **Referral by invitation, not by banner.** The national directory already
+  issues single-use invitation codes, and that is the whole mechanic a referral
+  programme needs. What is new is rewarding the inviter: a share link that
+  credits **scan credits**, not cash, which keeps the reward inside the product
+  and keeps payout, tax and fraud handling out of scope.
+- **Payouts the way Egyptian shops actually get paid.** If a community
+  programme ever does pay out, bank transfer and mobile wallet are the rails
+  people use. That is a deliberate deferral, not an oversight — a till that has
+  to withhold tax from an individual's commission is a different product.
+- **A place to talk that is not the app.** Merchant communities in this market
+  live on Telegram. A channel for releases and support costs very little and
+  reaches the people who will not install a community tab.
+- **Where they are weak: automation.** Comparable platforms document their
+  referral withdrawal as a manual, support-contacted process. Anything POS.Go
+  builds here should be automatic and self-service from the start, because that
+  is the cheapest possible way to be better than the alternative.
+
+**One hard constraint, inherited from the app store.** Google Play Billing
+becomes mandatory the moment an app can spend real money. Rewarding referrals
+with **granted** scan credits stays outside that rule; the moment credits become
+**purchasable**, the whole surface has to move to Play Billing, mobile wallets
+have to be reconciled, and this item stops being a small feature. That decision
+belongs before the first line of referral code is written, not after.
 
 ---
 
