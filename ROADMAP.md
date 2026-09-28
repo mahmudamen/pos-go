@@ -7,9 +7,39 @@ Anything marked **Shipped** is already in a released version; see
 [`CHANGELOG.md`](CHANGELOG.md). The engineering detail behind these items lives
 in the private source repository.
 
+## At a glance
+
+| | Workstream | Why it is where it is |
+|---|---|---|
+| **1** | [Egyptian VAT + ETA e-invoicing](#1-egyptian-vat--eta-e-invoicing) | A legal clock. A shop cannot file taxes without it. |
+| **2** | [POS Copilot community](#2-pos-copilot-community) | Retention for the people who use a till all day. |
+| **3** | [Release hardening](#3-release-hardening--before-the-next-update) | The first release reached shops; the next one is where rough edges show up. |
+| — | [AI assistance over shop data](#considering--ai-assistance-over-shop-data) | Deliberately **not started** — a product decision, not a queued ticket. |
+| — | [Evaluated, not committed](#considering-not-committed) | In-app purchase, warehouses, KDS, cutting orders, promotions, Argon2id. |
+
+**Workstream 1** runs in eight ordered stages: tax schema and VAT engine → ETA
+document builder and e-seal signer → submission outbox and worker → accounting
+core and general ledger → merchant onboarding and catalog mapping → reporting and
+reconciliation → receipt QR → go-live soak and cut-over.
+
+The first three are load-bearing. A VAT engine that cannot be trusted about
+tax-inclusive prices and discount pro-ration is worse than no VAT engine, and a
+document the tax authority rejects in real time is worse than no submission at
+all.
+
+**Workstream 3** before the next update: on-device re-test of the release build
+(sign-in, a sale, a printed receipt, an offline sale replayed), thermal printer
+pairing across the models a shop is likely to own on both 80 mm and 58 mm paper,
+the self-order QR menu driven end to end as a customer rather than as staff, and
+invoice scanning tuned against crumpled, badly lit, handwritten supplier
+invoices — the case where the review step earns its keep.
+
+If you are looking for something specific and it is not here, it has either
+shipped or been declined on purpose. Both are documented rather than dropped.
+
 ---
 
-## Next up — Egyptian tax and accounting (VAT + ETA e-invoicing)
+## 1. Egyptian VAT + ETA e-invoicing
 
 The largest remaining workstream, and the one with a legal clock on it.
 
@@ -89,7 +119,7 @@ Status: **not started.** This is a genuine product decision, not a queued ticket
 
 ---
 
-## Next up — POS Copilot community
+## 2. POS Copilot community
 
 POS.Go already has staff profiles, companies, and an Egypt-wide member
 directory with invitation codes, expertise levels and moderation. Planned next:
@@ -110,6 +140,31 @@ directory with invitation codes, expertise levels and moderation. Planned next:
 
 **Why:** retention for the people who use a till all day is worth more than
 another checkout feature.
+
+---
+
+## 3. Release hardening — before the next update
+
+The first release reached shops. The next one is where the rough edges get
+found, so this is deliberately unglamorous work with an obvious finish line:
+
+- **On-device re-test of the release build** — sign-in, a sale, a printed
+  receipt, and an offline sale replayed after reconnecting. The release build is
+  not the same binary as the debug build, and the difference has to be proven on
+  a real device rather than assumed.
+- **Thermal printer pairing** across the printer models a shop is likely to
+  already own, on both 80 mm and 58 mm paper. Receipt bytes are already correct
+  and hardware-agnostic; what remains is pairing and paper handling.
+- **Self-order QR menu, driven as a customer** — scan to order to staff approval
+  to payment, end to end, rather than only the staff-side approval screen.
+- **Invoice scanning against bad input** — crumpled, shadowed, handwritten and
+  skewed supplier invoices. The review step already exists; this is about making
+  the suggestion good enough that correcting it is quick.
+- **Offline behaviour under real network failure**, not just a clean disconnect:
+  a captive portal, a dead SIM, a router that has not finished booting.
+
+**Why first:** every one of these is a support call that otherwise arrives on
+the day a shop tries to use the product, and none of them need a design decision.
 
 ---
 
