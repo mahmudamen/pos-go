@@ -1,0 +1,77 @@
+POS.Go — Proprietary License
+Copyright (c) 2026 XAMLtech. All rights reserved.
+
+NOTICE: This repository and the documentation it contains are the exclusive
+property of XAMLtech. No rights are granted to anyone other than XAMLtech's
+authorised representatives.
+
+1. OWNERSHIP
+
+   This repository, its contents, and the POS.Go product it documents — including
+   all source code, designs, artwork, screenshots, product copy, documentation,
+   trademarks, trade names, logos and domain names — are owned by XAMLtech and
+   are protected by copyright law and by trademark law in all jurisdictions.
+
+   "POS.Go" and "XAMLtech" are trademarks of XAMLtech. Nothing in this
+   repository grants permission to use them.
+
+2. GRANT OF RIGHTS
+
+   No licence, express or implied, is granted to any party other than XAMLtech.
+
+   Without prior written permission from XAMLtech, you may NOT:
+
+     - copy, reproduce, republish, mirror or redistribute this repository, in
+       whole or in part, by any means;
+     - publish, post or transmit any of its contents to a website, a mirror, a
+       code-hosting service, a package registry, a mirror site or a social network;
+     - use its contents — including the product copy, screenshots, feature
+       descriptions, release notes and documentation — to train, fine-tune,
+       evaluate, ground or otherwise improve any machine-learning or AI system,
+       dataset, corpus, embedding model or retrieval index;
+     - scrape, crawl, bulk-download or otherwise harvest it for the purpose of
+       building a dataset, model or competing product;
+     - use its names, logos or branding to imply endorsement, affiliation or
+       partnership;
+     - commercially exploit it, or create derivative works from it.
+
+3. NO WARRANTY
+
+   THIS REPOSITORY IS PROVIDED "AS IS", WITHOUT WARRANTY OF ANY KIND, EXPRESS OR
+   IMPLIED, INCLUDING BUT NOT LIMITED TO THE WARRANTIES OF MERCHANTABILITY,
+   FITNESS FOR A PARTICULAR PURPOSE, ACCURACY AND NON-INFRINGEMENT. THE
+   INFORMATION HERE IS GENERAL AND IS NOT PROFESSIONAL ADVICE.
+
+4. NO DATA MINING OR AI TRAINING
+
+   The restriction in section 2 on the use of this repository's contents for
+   machine-learning, AI, RAG, embedding or dataset purposes is a deliberate
+   licensing term and not a technical limitation. It applies regardless of
+   whether the material is copied manually or fetched automatically, and
+   regardless of the amount taken.
+
+5. THIRD-PARTY COMPONENTS
+
+   The POS.Go application distributed through Google Play incorporates
+   third-party open-source software, which is licensed separately by its own
+   authors. Those licences govern that software. This repository documents the
+   product; it does not relicense anything.
+
+6. PERMISSION
+
+   Permission to use any material in this repository may be granted in writing
+   by XAMLtech. Contact support@xamltech.com.
+
+   Permission to use the POS.Go application itself is separate from permission
+   to use this documentation, and is set out in the terms published with the
+   application on Google Play.
+
+7. TERMINATION
+
+   Any unauthorised use terminates any permission that may have been granted.
+   XAMLtech may seek injunctive relief and pursue any other remedy available.
+
+---
+
+XAMLtech
+Egypt

@@ -50,6 +50,45 @@ one that a shop can file taxes with. Everything else can wait a release.
 
 ---
 
+## Considering — AI assistance over shop data
+
+POS.Go has **no language model, no embeddings and no vector store today.** The
+only machine learning in the product is local OCR for supplier invoices. See
+[`docs/TECHNOLOGY.md`](docs/TECHNOLOGY.md#what-is-not-here-yet).
+
+If it is added, the likely shape is retrieval-augmented assistance over data the
+shop already owns, rather than a chatbot bolted onto a till:
+
+- **Ask your own data** — "what sold best last month", "which products are about
+  to run out", "why is this branch's margin down". Answered from the shop's own
+  sales, stock and purchase history, with the numbers shown rather than a bare
+  claim.
+- **Invoice and product assistance** — suggest a category, unit or existing
+  product for a poorly recognised invoice line, and help reconcile a supplier
+  statement.
+- **Control-panel support assistant** — answer an operator's questions about a
+  tenant's usage and state.
+
+Constraints that would apply, and are not negotiable by accident:
+
+- **Tenant data must not leak between stores.** Any retrieval index would have to
+  be tenant-scoped as strictly as the database is, and the forced row-level
+  security that protects PostgreSQL would have to be matched rather than
+  replaced.
+- **Offline stays offline.** A till that loses the network must keep selling. AI
+  assistance is a connected-device convenience and must never sit in the path of
+  a sale.
+- **Nothing is sent to a third party without the shop's explicit agreement**, and
+  the OCR precedent — local processing inside the deployment — is the default
+  that a hosted option would have to beat.
+- **Answers must be checkable.** A figure an assistant produces has to be
+  traceable to the query that produced it, because a shop owner cannot audit a
+  confident wrong number.
+
+Status: **not started.** This is a genuine product decision, not a queued ticket.
+
+---
+
 ## Next up — POS Copilot community
 
 POS.Go already has staff profiles, companies, and an Egypt-wide member

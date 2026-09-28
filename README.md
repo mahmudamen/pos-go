@@ -28,7 +28,8 @@ report a bug or request a feature, use the channels above.
 | [`CHANGELOG.md`](CHANGELOG.md) | Every shipped version, newest first, with user-facing notes |
 | [`ROADMAP.md`](ROADMAP.md) | What is being built next and why |
 | [`VERSIONING.md`](VERSIONING.md) | Version numbering, `versionCode` policy, and what counts as a breaking change |
-| [`docs/TECHNOLOGY.md`](docs/TECHNOLOGY.md) | How it works: architecture, offline sync, security model, API shape |
+| [`docs/TECHNOLOGY.md`](docs/TECHNOLOGY.md) | How it works: Go backend, Flutter client, offline sync, invoice OCR, database, SaaS controls, security model |
+| [`LICENSE`](LICENSE) | Proprietary — XAMLtech. All rights reserved |
 
 ## What POS.Go does
 
@@ -109,3 +110,10 @@ feature for 15 days.
 
 Licensing of the application itself is not stated in this repository; see the
 Google Play listing for the terms that apply to the distributed app.
+
+## Licence
+
+This repository and the POS.Go product are the exclusive property of XAMLtech.
+All rights reserved — see [`LICENSE`](LICENSE). No part of it may be copied,
+redistributed, mirrored, or used to build a dataset or train a model without
+written permission.
